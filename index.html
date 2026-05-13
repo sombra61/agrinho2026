@@ -2,163 +2,8 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Agrinho 2026</title>
-
-<style>
-
-body{
-margin:0;
-background:#06110a;
-font-family:Arial;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-overflow:hidden;
-color:white;
-}
-
-.site{
-width:850px;
-height:430px;
-background:linear-gradient(to right,#041109,#082113);
-position:relative;
-overflow:hidden;
-border:1px solid #1d4727;
-}
-
-.menu{
-width:85px;
-height:100%;
-background:#1a1a1a;
-border-right:3px solid #46b04d;
-position:absolute;
-left:0;
-top:0;
-}
-
-.lista{
-padding:15px 10px;
-font-size:12px;
-color:#63d06b;
-}
-
-.titulo{
-position:absolute;
-top:18px;
-left:170px;
-font-size:30px;
-width:350px;
-line-height:32px;
-color:#6edf75;
-}
-
-.intro{
-position:absolute;
-left:95px;
-top:25px;
-width:130px;
-font-size:10px;
-line-height:15px;
-color:#73db7a;
-}
-
-.reserva{
-position:absolute;
-right:20px;
-top:35px;
-width:130px;
-font-size:10px;
-line-height:15px;
-color:#7de184;
-border-left:3px solid #46b04d;
-padding-left:12px;
-}
-
-.cards{
-position:absolute;
-left:160px;
-top:110px;
-display:flex;
-flex-direction:column;
-gap:22px;
-}
-
-.card{
-width:320px;
-height:90px;
-position:relative;
-transform-style:preserve-3d;
-transition:1s;
-cursor:pointer;
-}
-
-.card:hover{
-transform:rotateY(180deg);
-}
-
-.frente,.verso{
-position:absolute;
-width:100%;
-height:100%;
-backface-visibility:hidden;
-border-radius:16px;
-overflow:hidden;
-}
-
-.frente{
-background:#23452a;
-padding:14px;
-box-sizing:border-box;
-}
-
-.frente h3{
-margin:0;
-font-size:12px;
-color:#d77d55;
-}
-
-.frente p{
-font-size:10px;
-line-height:15px;
-margin-top:8px;
-color:#88dd8e;
-}
-
-.verso{
-transform:rotateY(180deg);
-}
-
-.verso img{
-width:100%;
-height:100%;
-object-fit:cover;
-filter:brightness(.7);
-}
-
-.textoimg{
-position:absolute;
-bottom:10px;
-left:12px;
-font-size:11px;
-color:white;
-background:rgba(0,0,0,.4);
-padding:5px 8px;
-border-radius:6px;
-}
-
-.bola{
-position:absolute;
-right:12px;
-top:10px;
-width:18px;
-height:18px;
-background:#dcdcdc;
-border-radius:50%;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -166,14 +11,20 @@ border-radius:50%;
 <div class="site">
 
 <div class="menu">
-<div class="lista">
-☰ <br><br>
+<div class="logo">
+☰
+</div>
+
+<div class="menuText">
 catalogo.
 </div>
 </div>
 
 <div class="intro">
-Este projeto foi desenvolvido com o objetivo de apresentar a importância do equilíbrio entre produção agrícola e sustentabilidade.
+Este projeto foi desenvolvido com o objetivo de apresentar, de forma interativa e visual,
+a importância do equilíbrio entre produção agrícola e sustentabilidade.
+Com base no tema do Agrinho 2026, a proposta mostra como tecnologia,
+consciência e eficiência no campo contribuem para um agro mais forte e responsável.
 </div>
 
 <div class="titulo">
@@ -181,7 +32,23 @@ Agro forte não é só produção. É equilíbrio.
 </div>
 
 <div class="reserva">
-A cidade de Reserva, no Paraná, possui forte ligação com a agricultura. Muitas famílias dependem do campo para sua renda e desenvolvimento.
+
+<h3>Reserva - PR</h3>
+
+<p>
+A cidade de Reserva, no Paraná, possui forte ligação com a agricultura,
+sendo uma das principais atividades da região.
+Muitas famílias dependem do campo para sua renda,
+atuando no plantio, colheita e manejo da terra.
+</p>
+
+<p>
+Ao mesmo tempo, é essencial que essa produção aconteça de forma consciente,
+respeitando o meio ambiente e preservando recursos naturais como o solo e a água.
+Assim, a agricultura continua sendo uma base de desenvolvimento para a cidade,
+sem comprometer as futuras gerações.
+</p>
+
 </div>
 
 <div class="cards">
@@ -189,10 +56,15 @@ A cidade de Reserva, no Paraná, possui forte ligação com a agricultura. Muita
 <div class="card">
 
 <div class="frente">
-<h3>Produção com Consciência</h3>
+
+<h2>
+Produção com Consciência
+</h2>
 
 <p>
 A produção agrícola moderna exige equilíbrio entre produtividade e preservação dos recursos naturais.
+Não se trata apenas de produzir mais, mas de garantir que o solo, a água e o ambiente continuem saudáveis ao longo do tempo.
+Produzir com consciência é essencial para um agro sustentável.
 </p>
 
 </div>
@@ -201,8 +73,32 @@ A produção agrícola moderna exige equilíbrio entre produtividade e preserva�
 
 <img src="img1.jpg">
 
-<div class="textoimg">
-Uso consciente do solo e redução de desperdícios
+<div class="txtImg">
+
+<span>
+Uso controlado de insumos
+</span>
+
+<span>
+Conservação do solo
+</span>
+
+<span>
+Planejamento agrícola
+</span>
+
+<span>
+Rotação de culturas
+</span>
+
+<span>
+Redução de desperdícios
+</span>
+
+<span>
+Uso equilibrado da terra
+</span>
+
 </div>
 
 </div>
@@ -213,10 +109,15 @@ Uso consciente do solo e redução de desperdícios
 
 <div class="frente">
 
-<h3>Tecnologia no Campo</h3>
+<h2>
+Tecnologia no Campo
+</h2>
 
 <p>
-A tecnologia transforma o agro em um setor mais preciso, eficiente e sustentável.
+A tecnologia tem transformado o agro em um setor mais preciso e eficiente.
+Com o uso de ferramentas modernas, é possível monitorar o solo,
+controlar máquinas e tomar decisões com base em dados.
+Isso reduz desperdícios e melhora a produtividade.
 </p>
 
 </div>
@@ -225,8 +126,32 @@ A tecnologia transforma o agro em um setor mais preciso, eficiente e sustentáve
 
 <img src="img2.jpg">
 
-<div class="textoimg">
-Monitoramento inteligente e automação agrícola
+<div class="txtImg">
+
+<span>
+Monitoramento em tempo real
+</span>
+
+<span>
+Uso de drones
+</span>
+
+<span>
+Máquinas automatizadas
+</span>
+
+<span>
+Sensores inteligentes
+</span>
+
+<span>
+Controle da produção
+</span>
+
+<span>
+Dados para decisões
+</span>
+
 </div>
 
 </div>
@@ -237,10 +162,15 @@ Monitoramento inteligente e automação agrícola
 
 <div class="frente">
 
-<h3>Redução de Impactos</h3>
+<h2>
+Redução de Impactos
+</h2>
 
 <p>
-A sustentabilidade depende da redução dos impactos ambientais causados pela produção.
+A sustentabilidade no campo depende da redução dos impactos ambientais.
+Práticas como o uso consciente da água,
+preservação de áreas naturais e controle responsável de insumos
+garantem a continuidade da produção sem prejudicar o meio ambiente.
 </p>
 
 </div>
@@ -249,8 +179,85 @@ A sustentabilidade depende da redução dos impactos ambientais causados pela pr
 
 <img src="img3.jpg">
 
-<div class="textoimg">
-Eficiência ambiental e preservação da natureza
+<div class="txtImg">
+
+<span>
+Menor desperdício
+</span>
+
+<span>
+Preservação ambiental
+</span>
+
+<span>
+Uso consciente da água
+</span>
+
+<span>
+Eficiência energética
+</span>
+
+<span>
+Proteção do solo
+</span>
+
+<span>
+Produção sustentável
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="frente">
+
+<h2>
+Agricultura em Reserva - PR
+</h2>
+
+<p>
+O município de Reserva possui forte presença agrícola,
+contribuindo diretamente para o desenvolvimento da cidade e geração de renda.
+A atividade rural da região depende do equilíbrio entre produção,
+preservação ambiental e uso consciente dos recursos naturais.
+</p>
+
+</div>
+
+<div class="verso">
+
+<img src="img4.jpg">
+
+<div class="txtImg">
+
+<span>
+Produção local sustentável
+</span>
+
+<span>
+Preservação de áreas naturais
+</span>
+
+<span>
+Proteção de nascentes
+</span>
+
+<span>
+Desenvolvimento rural
+</span>
+
+<span>
+Valorização do campo
+</span>
+
+<span>
+Equilíbrio ambiental
+</span>
+
 </div>
 
 </div>
@@ -260,6 +267,10 @@ Eficiência ambiental e preservação da natureza
 </div>
 
 <div class="bola"></div>
+
+<div class="detalhe"></div>
+
+<div class="linha"></div>
 
 </div>
 
