@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *{
 margin:0;
@@ -9,17 +9,21 @@ font-family:'Poppins',sans-serif;
 
 body{
 background:#02110a;
-overflow-x:hidden;
 color:white;
+overflow-x:hidden;
+min-height:100vh;
 }
 
 .site{
 width:100%;
 min-height:100vh;
 background:
-linear-gradient(90deg,#02110a 0%,#00311d 45%,#1b5e20 100%);
+radial-gradient(circle at center,#06371f 0%,#02110a 80%);
 position:relative;
+padding-bottom:100px;
 }
+
+/* MENU */
 
 .menu{
 position:fixed;
@@ -27,18 +31,17 @@ left:0;
 top:0;
 width:230px;
 height:100vh;
-background:#121214;
-border-right:3px solid #4cff68;
+background:#111214;
+border-right:3px solid #47ff68;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
 padding:40px 25px;
-z-index:999;
+z-index:1000;
 }
 
 .logo{
 font-size:38px;
-font-weight:700;
 text-align:center;
 cursor:pointer;
 }
@@ -46,18 +49,18 @@ cursor:pointer;
 .menuLinks{
 display:flex;
 flex-direction:column;
-gap:25px;
+gap:24px;
 }
 
 .menuLinks a{
 text-decoration:none;
-color:#d4d4d4;
-font-size:15px;
+color:#d8d8d8;
+font-size:16px;
 transition:.3s;
 }
 
 .menuLinks a:hover{
-color:#68ff7b;
+color:#6dff7f;
 padding-left:8px;
 }
 
@@ -67,74 +70,82 @@ text-align:center;
 cursor:pointer;
 }
 
+/* INTRODUÇÃO */
+
 .intro{
 position:absolute;
-left:290px;
+left:280px;
 top:70px;
-width:250px;
+width:240px;
 font-size:14px;
-line-height:1.8;
-color:#d5e8d6;
+line-height:1.9;
+color:#d4e6d6;
 }
+
+/* TITULO */
 
 .titulo{
 position:absolute;
-left:580px;
-top:70px;
-width:460px;
-font-size:58px;
-font-weight:800;
-line-height:1.05;
+left:560px;
+top:60px;
+width:350px;
+font-size:40px;
+font-weight:700;
+line-height:1.1;
 color:#62ff73;
 }
 
+/* LINHA */
+
 .linha{
 position:absolute;
-left:580px;
-top:235px;
-width:500px;
+left:560px;
+top:210px;
+width:400px;
 height:1px;
 background:rgba(255,255,255,.12);
 }
 
+/* RESERVA */
+
 .reserva{
 position:absolute;
-right:70px;
-top:70px;
-width:300px;
+right:50px;
+top:60px;
+width:260px;
 }
 
 .reserva h3{
-font-size:28px;
-margin-bottom:20px;
+font-size:24px;
 color:#62ff73;
-font-weight:700;
+margin-bottom:15px;
 }
 
 .reserva p{
-font-size:15px;
-line-height:1.9;
+font-size:14px;
+line-height:1.8;
 color:#e0e0e0;
-margin-bottom:20px;
+margin-bottom:15px;
 }
+
+/* CARDS */
 
 .cards{
 position:absolute;
-left:290px;
-top:350px;
+left:280px;
+top:250px;
+width:620px;
 display:flex;
 flex-direction:column;
 gap:22px;
-width:630px;
-padding-bottom:50px;
 }
 
 .card{
 width:100%;
 border-radius:22px;
 overflow:hidden;
-transition:.3s;
 cursor:pointer;
+transition:.3s;
 }
 
 .card:hover{
@@ -142,28 +153,29 @@ transform:translateX(10px);
 }
 
 .frente{
-background:rgba(72,122,60,.55);
-backdrop-filter:blur(8px);
+background:rgba(65,108,57,.65);
 padding:22px;
+backdrop-filter:blur(8px);
 border:1px solid rgba(255,255,255,.05);
 }
 
 .frente h2{
-color:#ff9d6b;
 font-size:20px;
+color:#ff9b6b;
 margin-bottom:12px;
 }
 
 .frente p{
 font-size:14px;
 line-height:1.8;
-color:#e4f3e4;
+color:#ecf8ed;
 }
 
 .verso{
 display:none;
 position:relative;
 height:220px;
+overflow:hidden;
 }
 
 .verso img{
@@ -183,10 +195,12 @@ gap:8px;
 
 .txtImg span{
 background:rgba(0,0,0,.55);
-padding:8px 12px;
+padding:6px 10px;
 border-radius:8px;
 font-size:12px;
 }
+
+/* DETALHES */
 
 .bola{
 position:fixed;
@@ -202,34 +216,13 @@ background:#d9d9d9;
 position:fixed;
 right:65px;
 bottom:38px;
-width:125px;
+width:120px;
 height:3px;
-background:#46ff64;
-border-radius:20px;
+background:#47ff68;
+border-radius:30px;
 }
 
-@media(max-width:1400px){
-
-.titulo{
-left:520px;
-font-size:50px;
-width:420px;
-}
-
-.linha{
-left:520px;
-width:420px;
-}
-
-.reserva{
-width:250px;
-}
-
-.cards{
-width:560px;
-}
-
-}
+/* RESPONSIVO */
 
 @media(max-width:1200px){
 
@@ -242,6 +235,10 @@ align-items:center;
 padding:20px;
 }
 
+.site{
+padding:20px;
+}
+
 .intro,
 .titulo,
 .reserva,
@@ -251,32 +248,16 @@ position:relative;
 left:auto;
 right:auto;
 top:auto;
-}
-
-.site{
-display:flex;
-flex-direction:column;
-padding:20px;
-}
-
-.intro{
 width:100%;
-margin-top:20px;
 }
 
 .titulo{
-width:100%;
-font-size:42px;
-margin:30px 0;
-}
-
-.reserva{
-width:100%;
-margin-bottom:30px;
+font-size:36px;
+margin:20px 0;
 }
 
 .cards{
-width:100%;
+margin-top:30px;
 }
 
 .bola,
