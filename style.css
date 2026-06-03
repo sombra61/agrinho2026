@@ -8,7 +8,7 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#03130b;
+background:#07130d;
 color:white;
 overflow-x:hidden;
 }
@@ -19,10 +19,10 @@ overflow-x:hidden;
 position:fixed;
 left:0;
 top:0;
-width:240px;
+width:230px;
 height:100vh;
 background:#111214;
-border-right:3px solid #4cff68;
+border-right:2px solid #2f9e44;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
@@ -31,64 +31,60 @@ z-index:1000;
 }
 
 .logo{
-font-size:40px;
+font-size:28px;
 font-weight:700;
+letter-spacing:2px;
+color:#68ff7b;
 text-align:center;
-cursor:pointer;
 }
 
 .links{
 display:flex;
 flex-direction:column;
-gap:25px;
+gap:20px;
 }
 
 .links a{
 text-decoration:none;
-color:#d4d4d4;
-font-size:16px;
+color:#d7d7d7;
+font-size:15px;
+padding:8px 0;
 transition:.3s;
 }
 
 .links a:hover{
-color:#69ff7a;
-padding-left:8px;
+color:#68ff7b;
+padding-left:10px;
 }
 
-.modo{
-font-size:28px;
-text-align:center;
-cursor:pointer;
-}
-
-/* CONTEÚDO */
+/* CONTEUDO */
 
 .conteudo{
-margin-left:240px;
+margin-left:230px;
 min-height:100vh;
 padding:60px;
 background:
-radial-gradient(circle at top right,#1a5f29 0%,transparent 35%),
-radial-gradient(circle at bottom left,#0d3018 0%,transparent 30%),
-linear-gradient(135deg,#03130b,#052016,#03130b);
+radial-gradient(circle at top right, rgba(54,126,63,.35), transparent 30%),
+radial-gradient(circle at bottom left, rgba(39,96,45,.25), transparent 30%),
+linear-gradient(135deg,#07130d,#0d2114,#07130d);
 }
 
 /* HERO */
 
 .hero{
 display:grid;
-grid-template-columns:1.5fr 1fr;
-gap:80px;
-align-items:start;
+grid-template-columns:2fr 1fr;
+gap:50px;
+align-items:center;
 margin-bottom:60px;
 }
 
 .descricao{
-max-width:500px;
 font-size:16px;
 line-height:1.9;
-color:#d9e6dc;
-margin-bottom:30px;
+max-width:700px;
+color:#d5e4d7;
+margin-bottom:25px;
 }
 
 .heroTexto h1{
@@ -100,24 +96,23 @@ max-width:700px;
 }
 
 .heroReserva{
-background:rgba(255,255,255,.03);
+background:rgba(255,255,255,.04);
 padding:30px;
 border-radius:20px;
+backdrop-filter:blur(8px);
 border:1px solid rgba(255,255,255,.05);
-backdrop-filter:blur(10px);
 }
 
 .heroReserva h2{
-font-size:32px;
-margin-bottom:20px;
+font-size:28px;
+margin-bottom:15px;
 color:#68ff7b;
 }
 
 .heroReserva p{
 font-size:15px;
-line-height:1.9;
-color:#e3e3e3;
-margin-bottom:15px;
+line-height:1.8;
+color:#e0e0e0;
 }
 
 /* CARDS */
@@ -129,55 +124,76 @@ gap:25px;
 }
 
 .card{
-background:rgba(66,110,58,.55);
-padding:28px;
-border-radius:24px;
-border:1px solid rgba(255,255,255,.05);
-backdrop-filter:blur(10px);
-transition:.3s;
+height:260px;
+perspective:1000px;
 cursor:pointer;
 }
 
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 40px rgba(0,0,0,.25);
+.card-inner{
+position:relative;
+width:100%;
+height:100%;
+transform-style:preserve-3d;
+transition:0.8s;
 }
 
-.card h3{
-font-size:26px;
+.card.virado .card-inner{
+transform:rotateY(180deg);
+}
+
+.frente,
+.verso{
+position:absolute;
+width:100%;
+height:100%;
+backface-visibility:hidden;
+border-radius:22px;
+overflow:hidden;
+}
+
+.frente{
+background:rgba(63,115,69,.55);
+border:1px solid rgba(255,255,255,.05);
+backdrop-filter:blur(10px);
+padding:25px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.frente h3{
+font-size:24px;
+color:#ff9e6d;
 margin-bottom:15px;
-color:#ff9e6f;
 }
 
-.card p{
+.frente p{
 font-size:15px;
-line-height:1.9;
-color:#eef6ef;
+line-height:1.8;
+color:#edf5ee;
+}
+
+.verso{
+transform:rotateY(180deg);
+background:#000;
+}
+
+.verso img{
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
 /* RESPONSIVO */
 
-@media(max-width:1200px){
-
-.hero{
-grid-template-columns:1fr;
-gap:40px;
-}
-
-.heroTexto h1{
-font-size:56px;
-}
-
-}
-
-@media(max-width:900px){
+@media(max-width:1000px){
 
 .menu{
 position:relative;
 width:100%;
 height:auto;
 border-right:none;
-border-bottom:3px solid #4cff68;
+border-bottom:2px solid #2f9e44;
 flex-direction:row;
 align-items:center;
 padding:20px;
@@ -194,16 +210,28 @@ margin-left:0;
 padding:30px;
 }
 
+.hero{
+grid-template-columns:1fr;
+}
+
 .heroTexto h1{
-font-size:42px;
+font-size:48px;
 }
 
-.descricao{
-font-size:15px;
 }
 
-.heroReserva h2{
-font-size:26px;
+@media(max-width:600px){
+
+.heroTexto h1{
+font-size:36px;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.card{
+height:300px;
 }
 
 }
