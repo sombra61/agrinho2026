@@ -13,8 +13,6 @@ color:white;
 overflow-x:hidden;
 }
 
-/* MENU */
-
 .menu{
 position:fixed;
 left:0;
@@ -59,8 +57,6 @@ padding-left:10px;
 text-shadow:0 0 8px rgba(104,255,123,.5);
 }
 
-/* CONTEÚDO */
-
 .conteudo{
 margin-left:230px;
 min-height:100vh;
@@ -70,8 +66,6 @@ radial-gradient(circle at top right, rgba(54,126,63,.35), transparent 30%),
 radial-gradient(circle at bottom left, rgba(39,96,45,.25), transparent 30%),
 linear-gradient(135deg,#07130d,#0d2114,#07130d);
 }
-
-/* HERO */
 
 .hero{
 display:grid;
@@ -116,8 +110,6 @@ font-size:15px;
 line-height:1.8;
 color:#e0e0e0;
 }
-
-/* CARDS */
 
 .cards{
 display:grid;
@@ -186,33 +178,30 @@ height:100%;
 object-fit:cover;
 }
 
-/* TOOLTIP */
-
 .tooltip{
 position:fixed;
-max-width:260px;
+max-width:280px;
 background:rgba(17,18,20,.96);
-border:2px solid #68ff7b;
-border-radius:12px;
-padding:12px 15px;
 color:#fff;
+border:2px solid #68ff7b;
+border-radius:14px;
+padding:14px 16px;
 font-size:14px;
-line-height:1.6;
+line-height:1.7;
+box-shadow:0 12px 30px rgba(0,0,0,.45);
 backdrop-filter:blur(10px);
-box-shadow:0 10px 25px rgba(0,0,0,.45);
+-webkit-backdrop-filter:blur(10px);
 pointer-events:none;
 opacity:0;
-transform:translateY(10px);
-transition:.25s;
+transform:translateY(10px) scale(.98);
+transition:opacity .25s ease,transform .25s ease;
 z-index:9999;
 }
 
 .tooltip.mostrar{
 opacity:1;
-transform:translateY(0);
+transform:translateY(0) scale(1);
 }
-
-/* RESPONSIVO */
 
 @media(max-width:1000px){
 
@@ -231,6 +220,7 @@ padding:20px;
 flex-direction:row;
 flex-wrap:wrap;
 justify-content:center;
+gap:15px;
 }
 
 .conteudo{
@@ -240,6 +230,7 @@ padding:30px;
 
 .hero{
 grid-template-columns:1fr;
+gap:35px;
 }
 
 .heroTexto h1{
@@ -254,12 +245,115 @@ font-size:48px;
 font-size:36px;
 }
 
+.descricao{
+font-size:15px;
+}
+
+.heroReserva{
+padding:20px;
+}
+
 .cards{
 grid-template-columns:1fr;
 }
 
 .card{
 height:300px;
+}
+
+.tooltip{
+max-width:220px;
+font-size:13px;
+padding:12px;
+}
+
+}.tooltip{
+position:fixed;
+max-width:280px;
+background:rgba(17,18,20,.96);
+color:#fff;
+border:2px solid #68ff7b;
+border-radius:14px;
+padding:14px 16px;
+font-size:14px;
+line-height:1.7;
+box-shadow:0 12px 30px rgba(0,0,0,.45);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+pointer-events:none;
+opacity:0;
+transform:translateY(10px) scale(.98);
+transition:opacity .25s ease,transform .25s ease;
+z-index:9999;
+}
+
+.tooltip.mostrar{
+opacity:1;
+transform:translateY(0) scale(1);
+}
+
+@media(max-width:1000px){
+
+.menu{
+position:relative;
+width:100%;
+height:auto;
+border-right:none;
+border-bottom:2px solid #2f9e44;
+flex-direction:row;
+align-items:center;
+padding:20px;
+}
+
+.links{
+flex-direction:row;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.conteudo{
+margin-left:0;
+padding:30px;
+}
+
+.hero{
+grid-template-columns:1fr;
+gap:35px;
+}
+
+.heroTexto h1{
+font-size:48px;
+}
+
+}
+
+@media(max-width:600px){
+
+.heroTexto h1{
+font-size:36px;
+}
+
+.descricao{
+font-size:15px;
+}
+
+.heroReserva{
+padding:20px;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.card{
+height:300px;
+}
+
+.tooltip{
+max-width:220px;
+font-size:13px;
+padding:12px;
 }
 
 }

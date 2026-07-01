@@ -39,7 +39,7 @@ document.body.appendChild(tooltip);
 document.querySelectorAll(".links a").forEach(link => {
 
     link.addEventListener("mouseenter", () => {
-        tooltip.textContent = link.dataset.info;
+        tooltip.innerHTML = link.dataset.info;
         tooltip.classList.add("mostrar");
     });
 
@@ -54,18 +54,18 @@ document.querySelectorAll(".links a").forEach(link => {
         const altura = tooltip.offsetHeight;
 
         if (x + largura > window.innerWidth) {
-            x = e.clientX - largura - margem;
+            x = window.innerWidth - largura - margem;
         }
 
         if (y + altura > window.innerHeight) {
-            y = e.clientY - altura - margem;
+            y = window.innerHeight - altura - margem;
         }
 
         if (x < margem) x = margem;
         if (y < margem) y = margem;
 
-        tooltip.style.left = `${x}px`;
-        tooltip.style.top = `${y}px`;
+        tooltip.style.left = x + "px";
+        tooltip.style.top = y + "px";
 
     });
 
